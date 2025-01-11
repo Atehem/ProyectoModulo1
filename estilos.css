@@ -1,0 +1,502 @@
+
+html {
+    scroll-behavior: smooth;
+}
+.cabeza{
+    background-color: #1a1a1a;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+.section {
+    display: none; 
+}
+
+.section.active {
+    display: block; 
+}
+
+.hero {
+    background-color: #f5f5f5;
+    padding: 60px 20px;
+    text-align: center;
+}
+.language-switcher{
+    padding-left: 15px;
+    padding-bottom: 15px;
+}
+#inicio{
+    background-color: #1c1c1c;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-decoration: none;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+/* Estilos para los boletos */
+#boletos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.image-container img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-container:hover img {
+    transform: scale(1.1);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.image-container:hover .overlay {
+    opacity: 1;
+}
+
+.overlay span {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Estilos generales del carrusel */
+.carousel {
+    border-radius: 10px; 
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3); 
+    overflow: hidden; 
+}
+
+.carousel-inner img,
+.carousel-inner iframe {
+    height: 400px; 
+    object-fit: cover; 
+}
+
+.carousel-indicators button {
+    background-color: #aa0707; 
+    width: 12px; 
+    height: 12px;
+    border-radius: 50%; 
+    margin: 0 5px; 
+}
+
+.carousel-indicators .active {
+    background-color: #ffffff; 
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5); 
+    border-radius: 50%; 
+    padding: 10px; 
+}
+
+.carousel-item {
+    transition: transform 1s ease-in-out;
+}
+/* Lugares */
+.lugares {
+    background-color: #1a1a1a; /* Fondo negro */
+    color: #fff; /* Texto blanco */
+    font-family: Arial, sans-serif; /* Fuente base */
+    max-width: 900px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centrar el contenedor horizontalmente */
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+.event-list {
+    max-width: 1200px;
+    margin: 50px auto; /* Centrado */
+    padding: 20px;
+}
+
+.event-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px ;
+    margin: 10px;
+    border-radius: 8px; /* Bordes redondeados */
+    display: flex; /* Alinea contenido en fila */
+    justify-content: space-between; /* Separa el texto del botón */
+    align-items: center; /* Centra verticalmente los elementos */
+    border: 1px solid #333; /* Borde opcional para darle más definición */
+}
+
+.event-info {
+    text-align: left;
+}
+
+.event-date {
+    font-size: 14px;
+    color: #ccc; /* Fecha en gris claro */
+    margin: 0;
+}
+
+.event-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.event-action {
+    text-align: right;
+}
+
+.event-button {
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ff5722; /* Texto naranja */
+    background: transparent;
+    border: 2px solid #ff5722;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.event-button:hover {
+    background: #ff5722; /* Fondo naranja al pasar el mouse */
+    color: #fff; /* Texto blanco */
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #444; /* Línea divisoria gris */
+    margin: 0;
+}
+/* eventos*/
+#evento{
+    background-color: #1c1c1c;
+    color: white;
+}
+.botonopcion {
+    
+    padding-left: 280px;
+    padding-right: 280px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    display: flex;
+    gap: 200px; /* Espaciado entre botones */
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #ff5722; /* Texto naranja */
+    border: 2px solid #ff5722; /* Borde naranja */
+    background: transparent; /* Fondo transparente */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    font-size: 16px; /* Tamaño de texto */
+    font-weight: bold; /* Texto en negrita */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Manito en el cursor */
+    transition: all 0.3s ease; /* Transición suave */
+    text-align: center; /* Centrado del texto */
+    text-decoration: none; /* Sin subrayado */
+}
+
+.btn:hover {
+    background-color: #ff5722; /* Fondo naranja al pasar el mouse */
+    color: #fff; /* Texto blanco */
+}
+/* Estilos para la sección de información */
+.info-section {
+    background-color: #1c1c1c;
+    color: white;
+    padding: 2rem 0;
+}
+
+.info-card {
+    text-align: center;
+    padding: 1rem;
+    border: 1px solid transparent;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.info-card:hover {
+    transform: scale(1.05);
+    border-color: #ff5a5f; /* Color del borde en hover */
+}
+
+.info-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #ff5a5f; /* Color principal del título */
+}
+
+.info-title span {
+    display: block;
+    color: white; /* Color secundario del título */
+    font-size: 1.2rem;
+}
+
+.info-description {
+    font-size: 1rem;
+    color: #d4d4d4;
+    margin-top: 0.5rem;
+}
+/* Estilos del álbum */
+.photo-album {
+    background-color: #1c1c1c; /* Fondo oscuro */
+    padding: 2rem 0;
+}
+
+.photo-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+.photo-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.photo-item:hover .photo-img {
+    transform: scale(1.1); /* Zoom en la imagen */
+}
+
+.photo-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Overlay oscuro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    color: white;
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 1rem;
+}
+
+.photo-item:hover .photo-overlay {
+    opacity: 1; /* Mostrar overlay al hover */
+}
+
+.contact-section {
+    background-color: #1c1c1c; /* Fondo oscuro */
+    padding: 2rem 0;
+    color: white;
+}
+
+.contact-section h2 span {
+    border-bottom: 3px solid #ff5a5f; /* Subrayado de título */
+}
+
+.map-container iframe {
+    border-radius: 10px; /* Bordes redondeados para el mapa */
+}
+
+input,
+textarea {
+    border: 1px solid #444;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #ff5a5f;
+}
+
+button {
+    cursor: pointer;
+}
+/**/
+
+:before,
+:after {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: nowrap;
+    text-align: center;
+    padding: 1rem; /* Espaciado interno */
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+.title {
+    font-size: 2em;
+    position: relative;
+    margin: 0 auto 1em;
+    padding: 1em 1em .25em 1em;
+    text-align: center;
+    text-transform: uppercase;
+}
+.title:after {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 240px;
+    height: 4px;
+    margin-left: -120px;
+    content: '';
+    background-color: #fff;
+}
+
+/* Clip text element */
+.clip-text {
+    font-size: 6em;
+    font-weight: bold;
+    line-height: 1;
+    position: relative;
+    display: inline-block;
+    margin: .25em;
+    padding: .5em .75em;
+    text-align: center;
+    /* Color fallback */
+    color: #fff;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.clip-text:before,
+.clip-text:after {
+    position: absolute;
+    content: '';
+}
+
+/* Background */
+.clip-text:before {
+    z-index: -2;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: inherit;
+}
+
+/* Text Background (black zone) */
+.clip-text:after {
+    position: absolute;
+    z-index: -1;
+    top: .125em;
+    right: .125em;
+    bottom: .125em;
+    left: .125em;
+    background-color: #000;
+}
+
+/* Change the background position to display letter when the black zone isn't here */
+.clip-text--no-textzone:before {
+    background-position: -.75em 0;
+}
+
+.clip-text--no-textzone:after {
+    content: none;
+}
+
+/* Use Background-size cover for photo background and no-repeat background */
+.clip-text--cover,
+.clip-text--cover:before {
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+            background-size: cover;
+  background-position: 50% 50%;
+}
+
+/* Background image from http://thepatternlibrary.com/ and http://lorempixel.com */
+.clip-text_one {
+    background-image: url(https://picsum.photos/480/200?random);
+}
+
+.clip-text_two {
+    background-image: url(https://picsum.photos/480/200?grayscale);
+}
+
+.clip-text_tree {
+    background-image: url(https://picsum.photos/480/200?grayscale&random=2);
+}
+
+.clip-text_four {
+    background-image: url(https://picsum.photos/480/200?grayscale&blur=3);
+}
+
+.clip-text_five {
+    background-image: url(https://picsum.photos/480/200?grayscale);
+}
+
+.clip-text_six {
+    background-image: url(https://picsum.photos/480/200?random=3);
+}
+
+.clip-text_seven {
+    background-image: url(https://picsum.photos/480/200?random=4);
+}
+
+.clip-text_eight {
+    background-image: url(https://picsum.photos/480/200?random=6);
+}
+
+.clip-text_nine {
+    background-image: url(https://picsum.photos/480/200?random=5);
+}
+
+.clip-text_ten {
+    background-image: url(https://picsum.photos/480/200?random=7);
+}
+
+.clip-text_eleven {
+    background-image: url(https://picsum.photos/480/200?random=8);
+    background-size: cover;
+}
+
+.clip-text_twelve {
+    background-image: url(https://picsum.photos/480/200?random=9);
+}
+
+.clip-text_thirteen {
+    background-image: url(https://picsum.photos/480/200?random=10);
+}
+
+.clip-text_fourteen {
+    background-image: url(https://picsum.photos/480/200?random=11);
+}
+
+.clip-text_fifteen {
+    background-image: url(https://picsum.photos/480/200?random=12);
+}

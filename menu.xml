@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu>
+    <item>
+        <name lang="es">Inicio</name>
+        <name lang="en">Home</name>
+        <link>#inicio</link>
+    </item>
+    <item>
+        <name lang="es">Evento</name>
+        <name lang="en">Event</name>
+        <link>#evento</link>
+    </item>
+    <item>
+        <name lang="es">Lugar</name>
+        <name lang="en">Location</name>
+        <link>#lugar</link>
+    </item>
+    <item>
+        <name lang="es">Contactos</name>
+        <name lang="en">Contacts</name>
+        <link>#contacto</link>
+    </item>
+</menu>

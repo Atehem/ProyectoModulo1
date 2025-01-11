@@ -1,0 +1,23 @@
+index.html
+├── Inicio (#inicio)
+├── Evento (#evento)
+│   ├── Carrusel de imágenes
+│   ├── Carrusel de videos
+│   └── Información sobre los boletos
+├── Lugar (#lugar)
+│   └── Información sobre la ubicación del evento
+├── Contactos (#contacto)
+│   ├── Información de contacto (Teléfono, Email)
+│   └── Formulario de contacto
+├── Registro (#registro)
+│   ├── Formulario de registro
+│   └── Tabla de registros
+├── Footer
+│   └── Animación de texto ("MEETION")
+json/
+├── translations.json
+js/
+├── script.js
+├── tnaveg.js
+estilos.css
+menu.xml
